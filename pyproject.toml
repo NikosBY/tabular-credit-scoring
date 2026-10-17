@@ -14,7 +14,14 @@ dependencies = [
     "uvicorn",
     "pydantic",
     "gradio",
+    "joblib",
 ]
+
+[project.scripts]
+credit-baseline = "tabularcreditscoring.modeling:main"
+
+[dependency-groups]
+dev = ["pytest", "ruff"]
 
 [build-system]
 requires = ["hatchling"]
